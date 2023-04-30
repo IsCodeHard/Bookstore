@@ -16,9 +16,9 @@
             $user=$retrieve->fetch(PDO::FETCH_ASSOC);
 
             if($user && password_verify($password, $user['password'])){
-                echo "<script>alert('OK!')</script>";
+                echo "<script>alert('logged in!')</script>";
             }else{
-                echo "<script>alert('PASSWORD NO MATCH!')</script>";
+                echo "<script>alert('password or email is wrong!')</script>";
             }
         }
     }
