@@ -14,6 +14,7 @@ body{
     flex-direction: column;
     gap: 0.3em;
     background-color: #fff;
+    font-family: Poppins, Roboto, 'Times New Roman', Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -27,7 +28,6 @@ header{
     font-weight: 300;
     min-height: 50px;
     font-size: 1.2em;
-    font-family: Poppins, Roboto, 'Times New Roman', Arial, Helvetica, sans-serif;
 }
 
 header ul.nav{
@@ -60,9 +60,62 @@ header ul.nav a:hover{
 main{
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
     gap: 1em;
     width: 100%;
+    padding: 5px;
+}
+
+#main_form{
+    justify-content: center;
+    align-items: center;
+}
+
+#main_form form{
+    width: 100%;
+    max-width: 500px;
+    padding: 5px 10px;
+    border: 2px solid #d3d3d3b4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#main_form form h3{
+    text-align: center;
+    font-weight: 400;
+}
+
+#main_form form .group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#main_form form .group input{
+    width: 100%;
+    min-height: 40px;
+    padding: 5px 10px;
+    border: 1px solid #d3d3d3b4;
+    border-radius: 5px;
+}
+
+#main_form form .group label{
+    color: #a3a3a3;;
+}
+
+#main_form form button{
+    color: #fff;
+    background-color: rgb(52, 52, 255);
+    border: none;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    border-radius: 5px;
 }
 
 footer{

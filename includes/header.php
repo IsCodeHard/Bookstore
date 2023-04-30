@@ -24,5 +24,4 @@
             </div>
         </ul>
     </header>
-    <main>
 
