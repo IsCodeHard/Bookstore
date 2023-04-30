@@ -63,9 +63,26 @@ main{
     gap: 1em;
     width: 100%;
     padding: 5px;
+    flex-direction: column;
+}
+
+main .username{
+    font-size: 1.1em;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid;
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+    align-self: center;
+}
+
+main #articles{
+    flex-grow: 1;
 }
 
 #main_form{
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -127,4 +144,5 @@ footer{
     font-size: 1.3em;
     color: #fff;
     font-weight: 500;
+    font-weight: 400;
 }

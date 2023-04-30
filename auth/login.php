@@ -16,7 +16,9 @@
             $user=$retrieve->fetch(PDO::FETCH_ASSOC);
 
             if($user && password_verify($password, $user['password'])){
-                echo "<script>alert('logged in!')</script>";
+                $_SESSION['bookstore']['username']=$user['username'];
+                $_SESSION['bookstore']['user_id']=$user['id'];
+                header("location:".APPURL);
             }else{
                 echo "<script>alert('password or email is wrong!')</script>";
             }

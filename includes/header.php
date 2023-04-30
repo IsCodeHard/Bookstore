@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    define("APPURL", "http://localhost:3000")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +19,16 @@
             <li><a href="">Contact</a></li>
             <li><a href="">Cart</a></li>
             <li><a href="">Categories</a></li>
-            <!-- Si l'utilisateur est connecté -->
-            <li><a href="">Profil</a></li>
             <!-- Si l'utilisateur n'est pas connecté -->
+            <?php if(!isset($_SESSION['bookstore']['user_id'])):?>
             <div class="login_box">
                 <a href="/auth/login.php">Login</a>
                 <a href="/auth/register.php" class="register">Register</a>
             </div>
+            <?php else:?>
+            <!-- Si l'utilisateur est connecté -->
+            <li><a href="">Profil</a></li>
+            <?php endif;?>
         </ul>
     </header>
 
