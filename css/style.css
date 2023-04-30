@@ -2,5 +2,76 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: red;
+}
+
+html, body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    background-color: #fff;
+}
+
+header{
+    width: 100%;
+    background-color: #222;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-weight: 300;
+    min-height: 50px;
+    font-size: 1.2em;
+    font-family: Poppins, Roboto, 'Times New Roman', Arial, Helvetica, sans-serif;
+}
+
+header ul.nav{
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+header ul.nav .login_box{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 160px;
+    align-items: center;
+}
+
+header ul.nav a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+header ul.nav a:hover{
+    font-weight: 400;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+footer{
+    min-height: 60px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 500;
 }

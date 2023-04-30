@@ -9,7 +9,20 @@
 </head>
 <body>
     <header>
-
+        <p class="logo">BookStore</p>
+        <ul class="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Cart</a></li>
+            <li><a href="">Categories</a></li>
+            <!-- Si l'utilisateur est connecté -->
+            <li><a href="">Profil</a></li>
+            <!-- Si l'utilisateur n'est pas connecté -->
+            <div class="login_box">
+                <a href="">Login</a>
+                <a href="" class="register">Register</a>
+            </div>
+        </ul>
     </header>
     <main>
 
