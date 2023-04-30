@@ -9,9 +9,6 @@
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    if($conn){
-        echo "Worked succesfully";
-    }
-    else{
-        echo "An error occured in db connection...";
+    if(!$conn){
+        die("An error occured in db connection...");
     }
