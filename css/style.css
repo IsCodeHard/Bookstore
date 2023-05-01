@@ -66,6 +66,7 @@ main{
     flex-direction: column;
 }
 
+/* index page */
 main .username{
     font-size: 1.1em;
     font-weight: 300;
@@ -79,8 +80,118 @@ main .username{
 
 main #articles{
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+main #articles .article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    border: 2px solid rgba(215, 214, 214, 0.902);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    justify-self: center;
+}
+
+main #articles .article .article_image_box{
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+main #articles .article .article_image_box img{
+    width: 100%;
+    height: 100%;
+}
+
+main #articles .article .article_content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+main #articles .article .article_content .article_name{
+    display: flex;
+    gap: 0.3em;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+main #articles .article .article_content .article_description{
+    text-align: justify;
+    color: #8a8a8a;
+}
+
+main #articles .article .article_content .btn_more{
+    text-decoration: none;
+    color: #fff;
+    background-color: #1e4df9;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+/* single article page */
+#main_single{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_single .single{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+    border: 2px solid rgba(215, 214, 214, 0.902);
+    box-shadow: 0 1px 10px 2px #ccc;
+    padding: 2px;
+}
+
+#main_single .single img, #main_single .single .single_content{
+    justify-self: center;
+}
+
+#main_single .single .single_content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#main_single .single .single_content .btn{
+    background-color: #1e4df9;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    max-width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#main_single .single .single_content .single_name{
+    text-transform: uppercase;
+}
+
+#main_single .single .single_content .single_description{
+    text-align: justify;
+    padding: 10px 0;
+}
+
+/* login and register page*/
 #main_form{
     flex-direction: row;
     justify-content: center;
@@ -91,7 +202,7 @@ main #articles{
     width: 100%;
     max-width: 500px;
     padding: 5px 10px;
-    border: 2px solid #d3d3d3b4;
+    border: 2px solid rgba(215, 214, 214, 0.902);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -114,7 +225,7 @@ main #articles{
     width: 100%;
     min-height: 40px;
     padding: 5px 10px;
-    border: 1px solid #d3d3d3b4;
+    border: 1px solid rgba(215, 214, 214, 0.902);
     border-radius: 5px;
 }
 
@@ -135,6 +246,11 @@ main #articles{
     border-radius: 5px;
 }
 
+.btn:hover{
+    background-color: #0b34c8 !important;
+    transition: all ease-in-out 0.2s;
+}
+
 footer{
     min-height: 60px;
     background-color: #222;
@@ -145,4 +261,22 @@ footer{
     color: #fff;
     font-weight: 500;
     font-weight: 400;
+}
+
+@media screen and (max-width:900px) {
+    main #articles{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+    }
+
+    #main_single .single{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:600px) {
+    main #articles{
+        grid-template-columns: 1fr;
+        gap: 0.5em;
+    }
 }
