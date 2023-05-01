@@ -27,7 +27,14 @@
             </div>
             <?php else:?>
             <!-- Si l'utilisateur est connecté -->
-            <li><a href="">Profil</a></li>
+            <li>
+                <a href="">Profil</a>
+                <ul class="sub_nav">
+                    <li><a href="">Wishlist</a></li>
+                    <li><a href="">Buying</a></li>
+                    <li><a href="/auth/logout.php">Log out</a></li>
+                </ul>
+            </li>
             <?php endif;?>
         </ul>
     </header>
