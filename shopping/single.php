@@ -1,5 +1,5 @@
-<?php $title="single"; include("../includes/header.php");?>
 <?php
+    $title="book does'nt exist!"; 
     require("../config/config.php");
 
     $product_id = strip_tags($_GET['product_id']) ?? "";
@@ -11,11 +11,14 @@
         $book=$retrieve->fetch(PDO::FETCH_ASSOC);
         if(!$book){
             echo "<script>alert('no book found')</script>";
+        }else{
+            $title=$book['name'];
         }
     }else{
         header('location:'.APPURL);
     }
 ?>
+<?php include("../includes/header.php");?>
 <main id="main_single">
     <?php if($book):?>
         <section class="single">
